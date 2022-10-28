@@ -8,7 +8,7 @@ export default class TypingEffect extends Component {
     super(props);
     this.state = {
       index: 0,
-      displayText: ""
+      displayText: props.text[0]
     };
     this.getRawText = this.getRawText.bind(this);
     this.type = this.type.bind(this);
