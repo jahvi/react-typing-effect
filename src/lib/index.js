@@ -76,24 +76,16 @@ export default class TypingEffect extends Component {
 
   render() {
     const {
-      speed,
-      eraseSpeed,
-      typingDelay,
-      eraseDelay,
       staticText,
-      text,
       cursor,
       displayTextRenderer,
       cursorClassName,
-      cursorRenderer,
-      startTypingCallback,
-      startErasingCallback,
-      ...otherProps
+      cursorRenderer
     } = this.props;
     const { displayText, index } = this.state;
 
     return (
-      <span {...otherProps}>
+      <span>
         {staticText ?
           <span>
             {staticText}&nbsp;
