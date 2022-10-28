@@ -26,6 +26,7 @@ export default class TypingEffect extends Component {
 
   startTyping() {
     this._timeout = setTimeout(() => {
+      this.props.startTypingCallback ? this.props.startTypingCallback(this.state.index) : null;
       this.type();
     }, this.props.typingDelay);
   }
@@ -47,6 +48,7 @@ export default class TypingEffect extends Component {
       });
     } else {
       this._timeout = setTimeout(() => {
+        this.props.startErasingCallback ? this.props.startErasingCallback(this.state.index) : null;
         this.erase();
       }, this.props.eraseDelay);
     }
@@ -125,4 +127,6 @@ TypingEffect.propTypes = {
   cursorClassName: PropTypes.string,
   displayTextRenderer: PropTypes.func,
   cursorRenderer: PropTypes.func,
+  startTypingCallback: PropTypes.func,
+  startErasingCallback: PropTypes.func,
 };

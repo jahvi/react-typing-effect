@@ -15,7 +15,7 @@ const ReactTypingEffectDemo = () => {
       }}
     >
       <div style={{ margin: 'auto' }}>
-        <ReactTypingEffect text={["Hello.", "World!!!"]} />
+        <ReactTypingEffect text={["Hello.", "World!!!"]} startTypingCallback={(i) => console.log(i)} startErasingCallback={(i) => console.log(i)} />
 
         <br />
 
