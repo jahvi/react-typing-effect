@@ -84,6 +84,8 @@ export default class TypingEffect extends Component {
       displayTextRenderer,
       cursorClassName,
       cursorRenderer,
+      startTypingCallback,
+      startErasingCallback,
       ...otherProps
     } = this.props;
     const { displayText, index } = this.state;
