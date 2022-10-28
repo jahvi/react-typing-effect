@@ -115,7 +115,9 @@ TypingEffect.defaultProps = {
   speed: 200,
   eraseSpeed: 200,
   eraseDelay: 5000,
-  typingDelay: 2500
+  typingDelay: 2500,
+  startTypingCallback: null,
+  startErasingCallback: null,
 };
 
 TypingEffect.propTypes = {
